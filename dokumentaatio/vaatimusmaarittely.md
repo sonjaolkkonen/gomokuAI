@@ -5,9 +5,9 @@ Projekti toteutetaan Pythonilla ja dokumentoidaan suomeksi (pystyn vertaisarvioi
 
 [Gomoku](https://en.wikipedia.org/wiki/Gomoku) on kahden pelattava strategiapeli 15x15-kokoisella pelilaudalla. Pelin tavoitteena on muodostaa jatkuva rivi viidestä saman tyyppisestä nappulasta – vaaka-, pysty- tai vinottain. Ensimmäinen pelaaja, joka tässä onnistuu, voittaa pelin.
 
-Tässä projektissa käyttäjä voi pelata tekoälyä vastaan, joka toteutetaan alpha-beta-karsinnalla tehostetulla minimax-algoritmilla. Käyttöliittymä toteutetaan `pygame`-kirjaston avulla.
+Tässä projektissa käyttäjä pelaa tekoälyä vastaan, joka toteutetaan alpha-beta-karsinnalla tehostetulla minimax-algoritmilla. Käyttöliittymä toteutetaan `pygame`-kirjaston avulla.
 
-Algoritmi laskee siirtoja pelitilanteesta eteenpäin ja valitsee siirron, joka tuottaa käytetyllä laskentasyvyydellä parhaan tuloksen olettaen, että sekä tekoäly että vastapelaaja tekevät joka tilanteessa itsensä kannalta parhaan mahdollisen siirron:
+Ohjelman ydin on algoritmilla toteutettava tekoäly, jota vastaan käyttäjä pelaa. Algoritmi laskee siirtoja pelitilanteesta eteenpäin ja valitsee siirron, joka tuottaa käytetyllä laskentasyvyydellä parhaan tuloksen olettaen, että sekä tekoäly että vastapelaaja tekevät joka tilanteessa itsensä kannalta parhaan mahdollisen siirron:
 
 - Tutkitaan vain vapaat ruudut, jotka ovat korkeintaan kahden ruudun päässä aiemmin tehdyistä siirroista, tai muu tätä tehokkaampi mielekäs kokeiltavien siirtojen karsinta.
 - Tutkittavia siirtoja ei selvitetä erikseen joka pelitilanteessa, vaan pidetään yllä listaa tällaisista ruuduista, ja päivitetään sitä tehtyjen / minimaxissa kokeiltujen siirtojen myötä.
